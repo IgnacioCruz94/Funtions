@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+}
+p {
+    text-align: justify;
+    font-size: medium;
+    color: black;
+}
+#footer {
+    text-align: end;
+    font-size: small;
+    font-style: italic;
+}
+#ActionButton {
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: white;
+    width: 50px;
+}
+#ActionButton:hover {
+    background-color: forestgreen;
+    color: white;
+}

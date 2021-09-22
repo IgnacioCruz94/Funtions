@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Activity 1: Functions</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Activity 1: Use of functions in JavaScript</h1> <br><br>
+        <p>
+            Hi there! <br>
+            You can type a word below and then you will see the following results in the console: <br>
+            1. The word you typed <br>
+            2. A count of the 'a' char in the word <br>
+            3. The correct article which must be used with the word (‘a’ or ‘an’). <br>
+            So after you click on <i>Check</i>, see your console!<br>
+        </p> 
+        <label for="InputText">Text:</label><br>
+        <input type="text" name="text" id="InputText" placeholder="Type your word"><br><br>
+        <!--document.getElementById("ActionButton").addEventListener("click",)-->
+        
+        <button id="ActionButton" onclick="funtionmain()">Check</button>
+        <script>
+            function funtionmain() {
+                const text=document.getElementById("InputText");
+                console.log(text.value)
+                const textarr=text.value.split("");
+
+                (function () {
+                    const counter_a=textarr.filter(l => l === "a");
+                    console.log(counter_a.length)
+                    
+                })();
+
+                const art = (arr) => {
+                    const vocales=["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+                    if (vocales.indexOf(arr[0]) === -1) {
+                        return "a"
+                    } else {
+                        return "an"
+                    }
+
+                }
+
+                console.log(art(textarr))
+                                      
+            }
+        </script>
+
+        <footer>
+            <p id="footer">
+                Made by José Ignacio Cruz Reyes
+            </p>
+        </footer>
+        
+    </body>
+</html>
